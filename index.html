@@ -50,6 +50,17 @@
       .font-primary {
         font-family: "Lato", sans-serif;
       }
+
+
+      .hours::after,
+      .days::after,
+.minutes::after {
+  content: "⋮";
+  display: block;
+  margin-left: 15px;
+  font-size: 16px; /* Adjust this value to control the size of the ellipses */
+}
+
     </style>
   </head>
   <body class="font-primary">
@@ -127,7 +138,7 @@
       <!-- navbar section ends -->
 
           <!-- banner section  -->
-    <section class="max-w-screen-xl mx-auto px-8 md:px-12 lg:px-20 py-8">
+    <section class="max-w-screen-xl mx-auto px-8 md:px-12 lg:px-20 py-2 lg:py-8">
   
       <!-- carousel section  -->
       <div class="hero lg:h-auto lg:relative">
@@ -228,5 +239,50 @@
 
          <!-- banner section  ends -->
     </header>
+    <!-- header section ends  -->
+
+    <!-- main section starts  -->
+    <main>
+      <!-- deal of the day section  -->
+      <section class="max-w-screen-xl mx-auto px-8 md:px-12 lg:px-20 mt-10 lg:mt-32">
+              <!-- content and timer  -->
+      <div class="flex flex-col gap-5 lg:flex-row justify-between items-center" >
+        <!-- content  -->
+        <div class="text-center lg:text-left">
+          <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold text-[#121212]">Deal of the day</h1>
+          <p class="mt-2 font-medium text-[rgba(18, 18, 18, 0.60)]">Savor the goodness of health and vitality with <br>our handpicked selection of fresh fruits</p>
+      </div>
+      <!-- timer  -->
+      <div class="grid grid-flow-col gap-3 lg:gap-5 text-center auto-cols-max">
+        <div class="flex flex-col">
+          <span class="countdown font-mono text-5xl days">
+            <span style="--value:26;"></span>
+          </span>
+          days
+        </div> 
+        <div class="flex flex-col">
+          <span class="countdown font-mono text-5xl hours">
+            <span style="--value:10;"></span>
+          </span>
+          hours
+        </div> 
+        <div class="flex flex-col">
+          <span class="countdown font-mono text-5xl minutes">
+            <span style="--value:7;"></span>
+          </span>
+          min
+        </div> 
+        <div class="flex flex-col">
+          <span class="countdown font-mono text-5xl">
+            <span style="--value:8;"></span>
+          </span>
+          sec
+        </div>
+      </div>
+      </div>
+      </section>
+      <!-- deal of the day section ends  -->
+    </main>
+    <!-- main section ends  -->
   </body>
 </html>
